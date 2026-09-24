@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ITRRU | Cafe in Nashik</title>
+<meta name="description" content="ITRRU, Nashik. Explore coffee, matcha, bites, signature sips and a warm space designed for conversations and unhurried moments.">
+<meta property="og:title" content="ITRRU | Cafe in Nashik">
+<meta property="og:description" content="A place to slow down. A place to stay awhile. Mahatma Nagar, Nashik.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:wght@300;400;500;600&family=Great+Vibes&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"CafeOrCoffeeShop",
+  "name":"ITRRU",
+  "address":{"@type":"PostalAddress","streetAddress":"Mahatma Nagar","addressLocality":"Nashik","addressRegion":"Maharashtra","addressCountry":"IN"},
+  "url":"https://www.instagram.com/itrru.nashik/",
+  "openingHours":"Mo-Su 14:00-23:00"
+}
+</script>
+<style>
+:root{
+  --forest:#132A21;
+  --forest-2:#1B3329;
+  --forest-3:#1E3D30;
+  --gold:#C2A26A;
+  --gold-dark:#A68B58;
+  --gold-light:#E8D9B8;
+  --cream:#FDFBF3;
+  --cream-2:#FAF6EB;
+  --cream-3:#F3EDE0;
+  --beige:#EBE6D9;
+  --line:#E8E0CC;
+  --text:#1A1C1A;
+  --muted:#6E6E6E;
+  --walnut:#2C241E;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--text);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit}
+img{display:block;max-width:100%}
+button{font-family:inherit}
+.reveal{opacity:0;transform:translateY(18px);transition:all .8s cubic-bezier(.2,.8,.2,1)}
+.reveal.visible{opacity:1;transform:translateY(0)}
+/* NAV */
+.navbar{position:fixed;top:0;left:0;right:0;z-index:60;display:flex;align-items:center;justify-content:space-between;padding:22px 40px;transition:all .4s ease;border-bottom:1px solid transparent}
+.navbar.scrolled{background:rgba(253,251,243,.98);backdrop-filter:blur(10px);border-color:var(--line);padding:14px 40px;box-shadow:0 2px 20px rgba(19,42,33,.06)}
+.navbar.scrolled .nav-link{color:var(--forest)}
+.navbar.scrolled .logo-mark{color:var(--forest)}
+.navbar.scrolled .nav-cta{border-color:var(--forest);color:var(--forest)}
+.navbar.scrolled .nav-cta:hover{background:var(--forest);color:var(--cream)}
+.navbar.scrolled .hamb span{background:var(--forest)}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo-mark{font-family:'Great Vibes',cursive;font-size:38px;line-height:1;color:var(--cream);letter-spacing:.02em;transition:.3s}
+.logo-mark span{font-family:'Cormorant Garamond',serif;font-weight:300;font-style:italic;font-size:11px;letter-spacing:.32em;text-transform:uppercase;display:block;margin-top:-8px;opacity:.8}
+.nav-links{display:flex;align-items:center}
+.nav-link{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--cream);text-decoration:none;margin:0 16px;opacity:.9;position:relative;padding-bottom:4px;transition:.2s}
+.nav-link::after{content:'';position:absolute;left:0;bottom:0;width:0;height:1px;background:var(--gold);transition:.3s}
+.nav-link:hover::after,.nav-link.active::after{width:100%}
+.nav-cta{font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;padding:11px 22px;border:1px solid rgba(253,251,243,.6);color:var(--cream);text-decoration:none;transition:.3s}
+.nav-cta:hover{background:var(--cream);color:var(--forest)}
+.hamb{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:6px}
+.hamb span{width:22px;height:1.5px;background:var(--cream);display:block;transition:.3s}
+.mobile-drawer{position:fixed;inset:0;z-index:70;background:var(--cream);transform:translateX(100%);transition:.45s cubic-bezier(.4,0,.2,1);display:flex;flex-direction:column;padding:30px 28px}
+.mobile-drawer.open{transform:translateX(0)}
+.mobile-drawer a{font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:300;letter-spacing:.08em;text-transform:uppercase;color:var(--forest);text-decoration:none;padding:14px 0;border-bottom:1px solid var(--line)}
+.mobile-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:30px}
+.close-btn{background:none;border:none;font-size:28px;color:var(--forest);cursor:pointer}
+/* HERO */
+.hero{height:100vh;min-height:640px;position:relative;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden;background:var(--forest)}
+.hero-bg{position:absolute;inset:0}
+.hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center 35%;filter:saturate(.95) brightness(.95)}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(to bottom, rgba(19,42,33,.22) 0%, rgba(19,42,33,.38) 50%, rgba(19,42,33,.62) 100%)}
+.hero-content{position:relative;z-index:2;max-width:780px;padding:0 24px;margin-top:36px}
+.hero-kicker{font-size:10px;letter-spacing:.36em;text-transform:uppercase;color:rgba(253,251,243,.85);margin-bottom:18px;display:block}
+.hero-title{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(56px,11vw,118px);line-height:.85;letter-spacing:.16em;color:var(--cream);margin:0;text-transform:uppercase}
+.hero-title em{font-family:'Great Vibes',cursive;font-weight:400;font-size:clamp(28px,5vw,44px);letter-spacing:.02em;text-transform:none;display:block;color:var(--gold);margin-top:-6px}
+.hero-tag{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;font-size:clamp(17px,2.4vw,26px);color:var(--cream);margin:18px auto 0;max-width:520px;line-height:1.35;opacity:.95}
+.hero-actions{display:flex;gap:14px;justify-content:center;margin-top:34px;flex-wrap:wrap}
+.btn{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;padding:15px 30px;border:1px solid;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;transition:.3s;cursor:pointer}
+.btn-gold{background:var(--gold);border-color:var(--gold);color:var(--forest)}
+.btn-gold:hover{background:var(--gold-dark);border-color:var(--gold-dark)}
+.btn-outline{border-color:rgba(253,251,243,.55);color:var(--cream);background:transparent}
+.btn-outline:hover{background:var(--cream);color:var(--forest);border-color:var(--cream)}
+.hero-location{margin-top:32px;font-size:10px;letter-spacing:.34em;text-transform:uppercase;color:rgba(253,251,243,.72)}
+.hero-scroll{position:absolute;bottom:28px;left:50%;transform:translateX(-50%);z-index:2;display:flex;flex-direction:column;align-items:center;gap:10px;color:rgba(253,251,243,.7);font-size:9px;letter-spacing:.24em;text-transform:uppercase}
+.hero-scroll span{width:1px;height:36px;background:rgba(253,251,243,.35);display:block}
+/* INTRO */
+.intro{padding:90px 0;background:var(--cream-2);overflow:hidden}
+.wrap{max-width:1180px;margin:0 auto;padding:0 40px}
+.intro-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:70px;align-items:center}
+.eyebrow{font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold-dark);display:flex;align-items:center;gap:14px;margin-bottom:18px}
+.eyebrow::before{content:'';width:36px;height:1px;background:var(--gold);display:block}
+.h2{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(32px,4vw,46px);line-height:1.05;letter-spacing:.06em;text-transform:uppercase;color:var(--forest);margin:0}
+.h2 em{font-style:italic;font-weight:300;text-transform:none;letter-spacing:.02em;color:var(--gold-dark)}
+.intro p{font-size:15px;line-height:1.85;color:#4a4a4a;margin:18px 0 0;font-weight:300;max-width:480px}
+.intro-img{position:relative;overflow:hidden;aspect-ratio:4/3.1;background:var(--beige)}
+.intro-img img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s ease}
+.intro-img:hover img{transform:scale(1.04)}
+.gold-rule{width:48px;height:1px;background:var(--gold);margin:22px 0}
+/* EXPERIENCE */
+.experience{padding:84px 0 70px;background:var(--cream)}
+.section-head{text-align:center;max-width:640px;margin:0 auto 48px}
+.section-head .eyebrow{justify-content:center}
+.section-head .eyebrow::before,.section-head .eyebrow::after{content:'';width:28px;height:1px;background:var(--gold)}
+.section-head p{font-size:14px;line-height:1.7;color:var(--muted);margin-top:12px;font-weight:300}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.card{group:card}
+.card-img{overflow:hidden;aspect-ratio:4/4.9;background:var(--beige);position:relative}
+.card-img img{width:100%;height:100%;object-fit:cover;transition:transform 1s ease}
+.card:hover .card-img img{transform:scale(1.06)}
+.card-label{position:absolute;left:14px;top:14px;background:var(--cream);padding:6px 10px;font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--forest);border:1px solid var(--line)}
+.card-body{padding:18px 2px 0}
+.card-body h3{font-family:'Cormorant Garamond',serif;font-weight:400;letter-spacing:.14em;text-transform:uppercase;font-size:13px;color:var(--forest);margin:0}
+.card-body p{font-size:13.5px;line-height:1.7;color:var(--muted);margin:8px 0 0;font-weight:300}
+.card-link{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--forest);text-decoration:none;border-bottom:1px solid var(--gold);padding-bottom:3px;margin-top:14px;display:inline-block}
+/* FEATURED */
+.featured{padding:78px 0;background:var(--forest);color:var(--cream)}
+.featured .h2{color:var(--cream)}
+.featured .eyebrow{color:var(--gold)}
+.featured-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:36px 42px;margin-top:48px}
+.f-item{border-top:1px solid rgba(232,214,184,.18);padding-top:18px}
+.f-top{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+.f-name{font-family:'Cormorant Garamond',serif;font-size:16px;letter-spacing:.08em;text-transform:uppercase;color:var(--cream);font-weight:400}
+.f-price{font-size:13px;letter-spacing:.08em;color:var(--gold);white-space:nowrap}
+.f-desc{font-size:12.5px;line-height:1.6;color:rgba(253,251,243,.62);margin-top:6px;font-weight:300}
+.featured-cta{text-align:center;margin-top:44px}
+.btn-light{border-color:var(--gold);color:var(--gold);background:transparent}
+.btn-light:hover{background:var(--gold);color:var(--forest)}
+/* MENU */
+.menu-section{padding:80px 0 40px;background:var(--cream-2)}
+.menu-head{text-align:center;max-width:720px;margin:0 auto}
+.search-wrap{max-width:420px;margin:28px auto 0;position:relative}
+.search-wrap input{width:100%;padding:14px 42px 14px 16px;border:1px solid var(--line);background:var(--cream);font-family:'DM Sans';font-size:13px;outline:none;transition:.2s}
+.search-wrap input:focus{border-color:var(--gold)}
+.search-wrap svg{position:absolute;right:14px;top:50%;transform:translateY(-50%);opacity:.45}
+.cat-nav{position:sticky;top:68px;z-index:20;background:rgba(250,246,235,.96);backdrop-filter:blur(8px);border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-top:32px}
+.cat-nav-inner{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;padding:10px 40px;max-width:1180px;margin:0 auto}
+.cat-nav-inner::-webkit-scrollbar{display:none}
+.cat-btn{white-space:nowrap;padding:9px 16px;font-size:10px;letter-spacing:.16em;text-transform:uppercase;border:1px solid var(--line);background:var(--cream);color:var(--forest);cursor:pointer;transition:.2s;flex-shrink:0}
+.cat-btn.active,.cat-btn:hover{background:var(--forest);color:var(--cream);border-color:var(--forest)}
+.menu-list{max-width:1180px;margin:0 auto;padding:0 40px}
+.menu-group{padding:36px 0 10px;border-bottom:1px solid var(--line)}
+.menu-group:last-child{border:none}
+.group-head{display:flex;align-items:center;gap:14px;margin-bottom:22px}
+.group-head h3{font-family:'Cormorant Garamond',serif;font-size:18px;letter-spacing:.16em;text-transform:uppercase;color:var(--forest);margin:0;font-weight:400}
+.group-head span{flex:1;height:1px;background:var(--line)}
+.group-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px 48px}
+.m-item{display:flex;justify-content:space-between;gap:14px;padding:12px 0;border-bottom:1px dotted rgba(0,0,0,.08)}
+.m-item:last-child{border:none}
+.m-left{flex:1}
+.m-name{font-size:13.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--forest);font-weight:500}
+.m-desc{font-size:12px;line-height:1.5;color:var(--muted);margin-top:3px;font-weight:300}
+.m-allergy{font-size:10px;letter-spacing:.06em;color:#8a7a5a;margin-top:4px}
+.m-price{font-size:13px;color:var(--forest);font-weight:500;white-space:nowrap}
+.m-price small{font-weight:300;color:var(--muted)}
+.menu-foot{text-align:center;padding:18px 0 0;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+/* SPACE */
+.space{padding:0;background:var(--cream)}
+.space-grid{display:grid;grid-template-columns:1.15fr .85fr;min-height:560px}
+.space-img{overflow:hidden;position:relative;background:var(--beige)}
+.space-img img{width:100%;height:100%;object-fit:cover;object-position:center}
+.space-text{padding:70px 56px;display:flex;flex-direction:column;justify-content:center;background:var(--cream-2)}
+.space-text .h2{font-size:38px}
+.space-text p{font-size:15px;line-height:1.85;color:#4a4a4a;font-weight:300;margin-top:16px}
+.space-list{margin-top:22px;display:flex;flex-direction:column;gap:12px}
+.space-list div{display:flex;gap:12px;align-items:center;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--forest)}
+.space-list i{width:6px;height:6px;background:var(--gold);border-radius:50%}
+/* GALLERY */
+.gallery{padding:80px 0;background:var(--cream)}
+.filter-row{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-bottom:28px}
+.filter-btn{padding:8px 14px;font-size:10px;letter-spacing:.16em;text-transform:uppercase;border:1px solid var(--line);background:transparent;color:var(--forest);cursor:pointer;transition:.2s}
+.filter-btn.active,.filter-btn:hover{background:var(--forest);color:var(--cream);border-color:var(--forest)}
+.masonry{columns:3;column-gap:18px}
+.masonry-item{break-inside:avoid;margin-bottom:18px;overflow:hidden;position:relative;cursor:pointer;background:var(--beige)}
+.masonry-item img{width:100%;display:block;transition:transform .9s ease}
+.masonry-item:hover img{transform:scale(1.05)}
+.masonry-item .cap{position:absolute;left:12px;bottom:12px;background:rgba(253,251,243,.92);padding:6px 10px;font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--forest);border:1px solid rgba(0,0,0,.06)}
+/* RESERVATION */
+.reservation{padding:80px 0;background:var(--forest);color:var(--cream)}
+.reservation .wrap{display:grid;grid-template-columns:.95fr 1.05fr;gap:60px;align-items:start}
+.reservation h2{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:38px;letter-spacing:.08em;text-transform:uppercase;line-height:1}
+.reservation h2 em{font-style:italic;font-weight:300;display:block;color:var(--gold)}
+.reservation p.lead{font-size:14px;line-height:1.7;color:rgba(253,251,243,.7);margin-top:14px;font-weight:300}
+.form-card{background:var(--cream);padding:30px 28px;color:var(--forest)}
+.form-card h4{font-family:'Cormorant Garamond',serif;font-size:16px;letter-spacing:.12em;text-transform:uppercase;margin:0 0 18px}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.field{display:flex;flex-direction:column;gap:6px}
+.field.full{grid-column:1/-1}
+.field label{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--forest);opacity:.7}
+.field input,.field select{padding:12px 12px;border:1px solid var(--line);background:#fff;font-size:13px;outline:none;transition:.2s;font-family:'DM Sans'}
+.field input:focus,.field select:focus{border-color:var(--gold)}
+.btn-whatsapp{width:100%;margin-top:16px;background:var(--gold);border:1px solid var(--gold);color:var(--forest);padding:14px;font-size:11px;letter-spacing:.18em;text-transform:uppercase;cursor:pointer;transition:.2s;display:flex;justify-content:center;align-items:center;gap:8px}
+.btn-whatsapp:hover{background:var(--gold-dark)}
+.form-note{font-size:11px;color:var(--muted);margin-top:10px;text-align:center;line-height:1.5}
+/* VISIT */
+.visit{padding:80px 0;background:var(--cream-2)}
+.visit-grid{display:grid;grid-template-columns:1.05fr .9fr;gap:48px;align-items:center}
+.visit-card{background:var(--cream);border:1px solid var(--line);padding:26px}
+.visit-card h3{font-family:'Cormorant Garamond',serif;letter-spacing:.12em;text-transform:uppercase;font-size:16px;margin:0;color:var(--forest)}
+.visit-card p{font-size:13.5px;line-height:1.7;color:var(--muted);margin:10px 0 0}
+.visit-actions{display:flex;gap:10px;margin-top:16px;flex-wrap:wrap}
+.btn-dark{background:var(--forest);color:var(--cream);border-color:var(--forest)}
+.btn-dark:hover{background:var(--forest-3)}
+.btn-line{border-color:var(--forest);color:var(--forest);background:transparent}
+.btn-line:hover{background:var(--forest);color:var(--cream)}
+.map-card{position:relative;overflow:hidden;aspect-ratio:4/3;background:var(--beige);border:1px solid var(--line)}
+.map-card img{width:100%;height:100%;object-fit:cover}
+.map-pin{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);background:var(--forest);color:var(--cream);padding:10px 14px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;display:flex;align-items:center;gap:8px;box-shadow:0 6px 20px rgba(0,0,0,.2)}
+.hours-mini{margin-top:18px;display:flex;gap:24px;border-top:1px solid var(--line);padding-top:14px}
+.hours-mini div{font-size:12px;line-height:1.6}
+.hours-mini strong{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-dark);display:block;margin-bottom:4px}
+/* HOURS */
+.hours-strip{padding:36px 0;background:var(--cream);border-top:1px solid var(--line);border-bottom:1px solid var(--line);text-align:center}
+.hours-strip .eyebrow{justify-content:center}
+.hours-big{font-family:'Cormorant Garamond',serif;font-size:34px;letter-spacing:.12em;text-transform:uppercase;color:var(--forest);margin:6px 0}
+.hours-big span{font-style:italic;letter-spacing:.04em;text-transform:none;color:var(--gold-dark)}
+.hours-sub{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+/* INSTAGRAM */
+.instagram{padding:80px 0;background:var(--cream)}
+.insta-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;margin-top:28px}
+.insta-grid a{overflow:hidden;aspect-ratio:1;background:var(--beige);display:block}
+.insta-grid img{width:100%;height:100%;object-fit:cover;transition:.6s}
+.insta-grid a:hover img{transform:scale(1.06);filter:brightness(.95)}
+.footer{padding:56px 0 24px;background:var(--forest);color:rgba(253,251,243,.7)}
+.footer-grid{display:grid;grid-template-columns:1.3fr .7fr .7fr 1fr;gap:40px}
+.footer-logo{font-family:'Great Vibes',cursive;font-size:42px;color:var(--cream);line-height:1}
+.footer-logo small{font-family:'DM Sans';font-size:9px;letter-spacing:.3em;text-transform:uppercase;display:block;opacity:.6;margin-top:-6px}
+.footer h4{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin:0 0 14px}
+.footer a{display:block;text-decoration:none;font-size:13px;line-height:1.8;color:rgba(253,251,243,.72);transition:.2s}
+.footer a:hover{color:var(--cream)}
+.footer-bottom{margin-top:40px;padding-top:18px;border-top:1px solid rgba(253,251,243,.1);display:flex;justify-content:space-between;align-items:center;gap:20px;font-size:11px;letter-spacing:.08em;color:rgba(253,251,243,.45);flex-wrap:wrap}
+.mobile-bottom{position:fixed;bottom:0;left:0;right:0;z-index:55;background:var(--cream);border-top:1px solid var(--line);display:none;grid-template-columns:repeat(3,1fr);padding:8px 6px;gap:6px}
+.mobile-bottom a{font-size:10px;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;padding:12px 6px;text-align:center;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;gap:6px}
+.mobile-bottom a.primary{background:var(--forest);color:var(--cream);border-color:var(--forest)}
+.mobile-bottom a.secondary{background:var(--cream);color:var(--forest)}
+.lightbox{position:fixed;inset:0;z-index:80;background:rgba(10,18,15,.92);display:none;align-items:center;justify-content:center;padding:30px}
+.lightbox.open{display:flex}
+.lightbox img{max-width:92vw;max-height:86vh;object-fit:contain;box-shadow:0 20px 60px rgba(0,0,0,.4)}
+.lightbox-close{position:absolute;top:18px;right:18px;background:none;border:none;color:var(--cream);font-size:28px;cursor:pointer}
+.toast{position:fixed;bottom:22px;left:50%;transform:translateX(-50%) translateY(80px);background:var(--forest);color:var(--cream);padding:14px 18px;font-size:13px;letter-spacing:.04em;border:1px solid rgba(255,255,255,.08);box-shadow:0 10px 30px rgba(0,0,0,.2);z-index:90;transition:.4s;max-width:92vw;text-align:center;opacity:0}
+.toast.show{transform:translateX(-50%) translateY(0);opacity:1}
+@media(max-width:980px){
+  .navbar{padding:16px 20px}
+  .navbar.scrolled{padding:12px 20px}
+  .nav-links,.nav-cta.desktop{display:none}
+  .hamb{display:flex}
+  .wrap{padding:0 20px}
+  .menu-list{padding:0 20px}
+  .cat-nav-inner{padding:10px 20px}
+  .intro-grid,.space-grid,.visit-grid,.reservation .wrap{grid-template-columns:1fr}
+  .cards{grid-template-columns:1fr}
+  .featured-grid{grid-template-columns:1fr}
+  .group-grid{grid-template-columns:1fr}
+  .masonry{columns:2}
+  .insta-grid{grid-template-columns:repeat(3,1fr)}
+  .footer-grid{grid-template-columns:1fr 1fr}
+  .space-text{padding:34px 20px}
+  .hero-title{letter-spacing:.1em}
+}
+@media(max-width:640px){
+  .intro{padding:56px 0}
+  .experience{padding:56px 0}
+  .menu-section{padding:56px 0 30px}
+  .gallery{padding:56px 0}
+  .reservation{padding:56px 0}
+  .visit{padding:56px 0}
+  .form-grid{grid-template-columns:1fr}
+  .masonry{columns:1}
+  .mobile-bottom{display:grid}
+  body{padding-bottom:68px}
+  .hero{height:92vh;min-height:560px}
+  .hero-content{margin-top:20px}
+  .footer-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<nav class="navbar" id="navbar">
+  <a href="#home" class="logo">
+    <div class="logo-mark">itrru <span>Mahatma Nagar · Nashik</span></div>
+  </a>
+  <div class="nav-links" aria-label="Primary">
+    <a href="#home" class="nav-link active">Home</a>
+    <a href="#menu" class="nav-link">Menu</a>
+    <a href="#experience" class="nav-link">Experience</a>
+    <a href="#gallery" class="nav-link">Gallery</a>
+    <a href="#visit" class="nav-link">Visit</a>
+  </div>
+  <a href="#reservation" class="nav-cta desktop">Reserve a Table</a>
+  <button class="hamb" id="menuToggle" aria-label="Open menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+  <div class="mobile-top">
+    <div class="logo-mark" style="color:var(--forest)">itrru <span>Mahatma Nagar · Nashik</span></div>
+    <button class="close-btn" id="closeDrawer" aria-label="Close menu">×</button>
+  </div>
+  <a href="#home" class="m-link">Home</a>
+  <a href="#menu" class="m-link">Menu</a>
+  <a href="#experience" class="m-link">Experience</a>
+  <a href="#gallery" class="m-link">Gallery</a>
+  <a href="#visit" class="m-link">Visit</a>
+  <a href="#reservation" class="m-link" style="margin-top:20px;background:var(--forest);color:var(--cream);text-align:center;font-size:14px;letter-spacing:.2em;padding:16px">Reserve a Table</a>
+  <div style="margin-top:auto;padding-top:24px;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)">Open Everyday 2 PM — 11 PM<br><a href="https://maps.app.goo.gl/YYs8S9pPbvBSNGES9" target="_blank" style="font-family:'DM Sans';font-size:11px;color:var(--forest);border:none;padding:0">Get Directions →</a></div>
+</div>
+
+<section class="hero" id="home">
+  <div class="hero-bg"><img src="https://www.designarena.ai/u/a0a6b25f-58c5-486b-a08e-87dc1195c361" alt="ITRRU interior bar with brass stools and warm lighting" fetchpriority="high"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content reveal visible">
+    <span class="hero-kicker">Nashik · Mahatma Nagar</span>
+    <h1 class="hero-title">ITRRU <em>a place to slow down</em></h1>
+    <p class="hero-tag">A place to slow down. A place to stay awhile.</p>
+    <div class="hero-actions">
+      <a href="#menu" class="btn btn-outline">Explore Menu</a>
+      <a href="#reservation" class="btn btn-gold">Reserve a Table</a>
+    </div>
+    <span class="hero-location">Mahatma Nagar · Nashik</span>
+  </div>
+  <div class="hero-scroll">Scroll <span></span></div>
+</section>
+
+<section class="intro" id="about">
+  <div class="wrap intro-grid">
+    <div class="reveal">
+      <div class="eyebrow">More than a cup of coffee</div>
+      <h2 class="h2">A thoughtfully <br>designed space <em>for coffee,<br>conversations,</em> food and<br>unhurried moments.</h2>
+      <div class="gold-rule"></div>
+      <p>ITRRU is not just a cafe. It is a warm, architectural pause in the middle of Nashik — where soft light, walnut wood, brass details and quiet corners invite you to linger longer than you planned.</p>
+      <p style="color:var(--muted);font-size:13px;margin-top:10px">Cream · Walnut · Brass · Soft Light · Forest Green</p>
+    </div>
+    <div class="intro-img reveal" style="transition-delay:.12s">
+      <img src="https://www.designarena.ai/u/dc59ba8f-a532-445a-bca2-ceb862c1a1cb" alt="ITRRU interior detail with artwork and warm light" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<section class="experience" id="experience">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">The ITRRU Experience</div>
+      <h2 class="h2">Stay awhile</h2>
+      <p>Coffee, bites and moments — crafted with care, served with warmth.</p>
+    </div>
+    <div class="cards">
+      <div class="card reveal">
+        <div class="card-img">
+          <span class="card-label">01 — Coffee</span>
+          <img src="https://www.designarena.ai/u/2d1b41fd-b0ab-4b0f-b1b0-75ceb9c36adb" alt="Crafted coffee at ITRRU" loading="lazy">
+        </div>
+        <div class="card-body">
+          <h3>Coffee</h3>
+          <p>Crafted hot and cold coffee — from bold espresso to slow pour-over, Wavy sea-salt brown sugar and honey cloud.</p>
+          <a href="#menu" class="card-link">View coffee →</a>
+        </div>
+      </div>
+      <div class="card reveal" style="transition-delay:.08s">
+        <div class="card-img">
+          <span class="card-label">02 — Bites</span>
+          <img src="https://www.designarena.ai/u/82296a6c-d3fb-40bf-8b34-5de51576d7ca" alt="Small plates and sharing food at ITRRU" loading="lazy">
+        </div>
+        <div class="card-body">
+          <h3>Bites</h3>
+          <p>Small plates and sharing food — Tear &amp; Share, Butter Bath Prawns, Truffle Crunch and Sweet Heat Edamame.</p>
+          <a href="#menu" class="card-link">View bites →</a>
+        </div>
+      </div>
+      <div class="card reveal" style="transition-delay:.16s">
+        <div class="card-img">
+          <span class="card-label">03 — Moments</span>
+          <img src="https://www.designarena.ai/u/74102dc0-0ea6-452c-9328-718dd5dfd1ec" alt="Warm space for conversations at ITRRU" loading="lazy">
+        </div>
+        <div class="card-body">
+          <h3>Moments</h3>
+          <p>A warm space for conversations — soft light, thoughtful details and tables meant for lingering.</p>
+          <a href="#gallery" class="card-link">Explore space →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="featured" id="featured">
+  <div class="wrap">
+    <div class="section-head" style="margin-bottom:0">
+      <div class="eyebrow" style="color:var(--gold)">A Taste of ITRRU</div>
+      <h2 class="h2" style="color:var(--cream)">Editor's selection</h2>
+      <p style="color:rgba(253,251,243,.6)">Six signatures that guests return for — coffee, matcha and bites, inclusive of all taxes.</p>
+    </div>
+    <div class="featured-grid">
+      <div class="f-item">
+        <div class="f-top"><span class="f-name">Banoffee Iced Coffee</span><span class="f-price">₹250</span></div>
+        <div class="f-desc">Banana · caramel · coffee — creamy, nostalgic, cold-brewed.</div>
+      </div>
+      <div class="f-item">
+        <div class="f-top"><span class="f-name">Strawberry Matcha</span><span class="f-price">₹350</span></div>
+        <div class="f-desc">Ceremonial matcha layered with fresh strawberry and milk.</div>
+      </div>
+      <div class="f-item">
+        <div class="f-top"><span class="f-name">Pistachio Affogato</span><span class="f-price">₹350</span></div>
+        <div class="f-desc">Pistachio scoop drowned in hot espresso — nutty and bold.</div>
+      </div>
+      <div class="f-item">
+        <div class="f-top"><span class="f-name">Butter Bath Prawns</span><span class="f-price">₹350</span></div>
+        <div class="f-desc">Shellfish, dairy — succulent prawns in brown butter, herbs.</div>
+      </div>
+      <div class="f-item">
+        <div class="f-top"><span class="f-name">Wavy</span><span class="f-price">₹225</span></div>
+        <div class="f-desc">Sea salt · brown sugar · shaken espresso — signature sip.</div>
+      </div>
+      <div class="f-item">
+        <div class="f-top"><span class="f-name">Pour Over</span><span class="f-price">₹350</span></div>
+        <div class="f-desc">Slow-brewed, clean and aromatic — single origin.</div>
+      </div>
+    </div>
+    <div class="featured-cta"><a href="#menu" class="btn btn-light">View Full Menu</a></div>
+  </div>
+</section>
+
+<section class="menu-section" id="menu">
+  <div class="menu-head wrap reveal">
+    <div class="eyebrow" style="justify-content:center">The Menu</div>
+    <h2 class="h2">Full menu</h2>
+    <p style="font-size:13px;color:var(--muted);margin-top:10px;font-weight:300">Search coffee, matcha, bites… No cart — just a premium editorial menu.</p>
+    <div class="search-wrap">
+      <input type="text" id="menuSearch" placeholder="Search coffee, matcha, bites…" aria-label="Search menu">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="11" cy="11" r="7"/><path d="M20 20L16 16"/></svg>
+    </div>
+  </div>
+  <div class="cat-nav" id="catNav">
+    <div class="cat-nav-inner">
+      <button class="cat-btn active" data-filter="all">All</button>
+      <button class="cat-btn" data-filter="HOT COFFEE">Hot Coffee</button>
+      <button class="cat-btn" data-filter="ICED COFFEE">Iced Coffee</button>
+      <button class="cat-btn" data-filter="MATCHA">Matcha</button>
+      <button class="cat-btn" data-filter="AFFOGATO">Affogato</button>
+      <button class="cat-btn" data-filter="SIGNATURE">Signature Sips</button>
+      <button class="cat-btn" data-filter="TEAS">Teas</button>
+      <button class="cat-btn" data-filter="BITE RITUALS">Bite Rituals</button>
+    </div>
+  </div>
+  <div class="menu-list" id="menuList">
+    <!-- HOT COFFEE -->
+    <div class="menu-group" data-category="HOT COFFEE">
+      <div class="group-head"><h3>Hot Coffee</h3><span></span></div>
+      <div class="group-grid">
+        <div class="m-item" data-name="espresso"><div class="m-left"><div class="m-name">Espresso ₹150</div><div class="m-desc">Bold shot</div></div><div class="m-price">₹150</div></div>
+        <div class="m-item" data-name="americano"><div class="m-left"><div class="m-name">Americano ₹220</div><div class="m-desc">Espresso + hot water</div></div><div class="m-price">₹220</div></div>
+        <div class="m-item" data-name="cappuccino"><div class="m-left"><div class="m-name">Cappuccino ₹240</div><div class="m-desc">Espresso / steamed milk / foam</div></div><div class="m-price">₹240</div></div>
+        <div class="m-item" data-name="latte"><div class="m-left"><div class="m-name">Latte ₹240</div><div class="m-desc">Smooth espresso + milk</div></div><div class="m-price">₹240</div></div>
+        <div class="m-item" data-name="flat white"><div class="m-left"><div class="m-name">Flat White ₹240</div><div class="m-desc">Silky milk over espresso</div></div><div class="m-price">₹240</div></div>
+        <div class="m-item" data-name="cortado"><div class="m-left"><div class="m-name">Cortado ₹220</div><div class="m-desc">Espresso + small milk</div></div><div class="m-price">₹220</div></div>
+        <div class="m-item" data-name="caramel macchiato"><div class="m-left"><div class="m-name">Caramel Macchiato ₹240</div><div class="m-desc">Espresso / milk / caramel</div></div><div class="m-price">₹240</div></div>
+        <div class="m-item" data-name="pour over"><div class="m-left"><div class="m-name">Pour Over ₹350</div><div class="m-desc">Slow-brewed</div></div><div class="m-price">₹350</div></div>
+        <div class="m-item" data-name="mocha"><div class="m-left"><div class="m-name">Mocha ₹220</div><div class="m-desc">Espresso / chocolate / milk</div></div><div class="m-price">₹220</div></div>
+        <div class="m-item" data-name="hot chocolate"><div class="m-left"><div class="m-name">Hot Chocolate ₹220</div><div class="m-desc">Rich chocolate + steamed milk</div></div><div class="m-price">₹220</div></div>
+      </div>
+    </div>
+    <!-- ICED COFFEE -->
+    <div class="menu-group" data-category="ICED COFFEE">
+      <div class="group-head"><h3>Iced Coffee</h3><span></span></div>
+      <div class="group-grid">
+        <div class="m-item" data-name="banoffee iced coffee"><div class="m-left"><div class="m-name">Banoffee Iced Coffee ₹250</div><div class="m-desc">Banana / caramel / coffee</div></div><div class="m-price">₹250</div></div>
+        <div class="m-item" data-name="iced caramel macchiato"><div class="m-left"><div class="m-name">Iced Caramel Macchiato ₹260</div><div class="m-desc">Cold milk / espresso / caramel</div></div><div class="m-price">₹260</div></div>
+        <div class="m-item" data-name="vietnamese coffee"><div class="m-left"><div class="m-name">Vietnamese Coffee ₹260</div><div class="m-desc">Condensed milk</div></div><div class="m-price">₹260</div></div>
+        <div class="m-item" data-name="iced americano"><div class="m-left"><div class="m-name">Iced Americano ₹240</div><div class="m-desc">Espresso / water / ice</div></div><div class="m-price">₹240</div></div>
+        <div class="m-item" data-name="iced latte"><div class="m-left"><div class="m-name">Iced Latte ₹240</div><div class="m-desc">Espresso / cold milk</div></div><div class="m-price">₹240</div></div>
+        <div class="m-item" data-name="wavy"><div class="m-left"><div class="m-name">Wavy ₹225</div><div class="m-desc">Sea salt / brown sugar / shaken espresso</div></div><div class="m-price">₹225</div></div>
+        <div class="m-item" data-name="cloud honey espresso"><div class="m-left"><div class="m-name">Cloud Honey Espresso ₹250</div><div class="m-desc">Honey / creamy cloud</div></div><div class="m-price">₹250</div></div>
+        <div class="m-item" data-name="cold brew"><div class="m-left"><div class="m-name">Cold Brew ₹250</div><div class="m-desc">Slow-steeped</div></div><div class="m-price">₹250</div></div>
+        <div class="m-item" data-name="iced mocha"><div class="m-left"><div class="m-name">Iced Mocha ₹250</div><div class="m-desc">Chocolate / espresso / milk</div></div><div class="m-price">₹250</div></div>
+        <div class="m-item" data-name="espresso tonic"><div class="m-left"><div class="m-name">Espresso Tonic ₹250</div><div class="m-desc">Espresso / tonic</div></div><div class="m-price">₹250</div></div>
+        <div class="m-item" data-name="house cold coffee"><div class="m-left"><div class="m-name">House Cold Coffee ₹250</div><div class="m-desc">Creamy chilled classic</div></div><div class="m-price">₹250</div></div>
+      </div>
+    </div>
+    <!-- MATCHA -->
+    <div class="menu-group" data-category="MATCHA">
+      <div class="group-head"><h3>Matcha</h3><span></span></div>
+      <div class="group-grid">
+        <div class="m-item" data-name="hot matcha latte"><div class="m-left"><div class="m-name">Hot Matcha Latte ₹250</div><div class="m-desc">Ceremonial grade, steamed milk</div></div><div class="m-price">₹250</div></div>
+        <div class="m-item" data-name="iced matcha"><div class="m-left"><div class="m-name">Iced Matcha ₹280</div><div class="m-desc">Chilled, whisked to order</div></div><div class="m-price">₹280</div></div>
+        <div class="m-item" data-name="strawberry matcha"><div class="m-left"><div class="m-name">Strawberry Matcha ₹350</div><div class="m-desc">Strawberry compote · matcha · milk</div></div><div class="m-price">₹350</div></div>
+        <div class="m-item" data-name="vanilla sea salt matcha latte"><div class="m-left"><div class="m-name">Vanilla Sea Salt Matcha Latte ₹350</div><div class="m-desc">Vanilla, fleur de sel, creamy foam</div></div><div class="m-price">₹350</div></div>
+      </div>
+    </div>
+    <!-- AFFOGATO -->
+    <div class="menu-group" data-category="AFFOGATO">
+      <div class="group-head"><h3>Affogato</h3><span></span></div>
+      <div class="group-grid">
+        <div class="m-item" data-name="classic affogato"><div class="m-left"><div class="m-name">Classic Affogato ₹250</div><div class="m-desc">Vanilla + espresso</div></div><div class="m-price">₹250</div></div>
+        <div class="m-item" data-name="pistachio affogato"><div class="m-left"><div class="m-name">Pistachio Affogato ₹350</div><div class="m-desc">Pistachio + espresso</div></div><div class="m-price">₹350</div></div>
+      </div>
+    </div>
+    <!-- SIGNATURE -->
+    <div class="menu-group" data-category="SIGNATURE">
+      <div class="group-head"><h3>Signature Sips & Mocktails</h3><span></span></div>
+      <div class="group-grid">
+        <div class="m-item" data-name="brazilian cherry lemonade"><div class="m-left"><div class="m-name">Brazilian Cherry Lemonade ₹250</div></div><div class="m-price">₹250</div></div>
+        <div class="m-item" data-name="lychee & rose"><div class="m-left"><div class="m-name">Lychee & Rose ₹300</div></div><div class="m-price">₹300</div></div>
+        <div class="m-item" data-name="key lime pie mocktail"><div class="m-left"><div class="m-name">Key Lime Pie Mocktail ₹250</div></div><div class="m-price">₹250</div></div>
+        <div class="m-item" data-name="hibiscus coconut milk"><div class="m-left"><div class="m-name">Hibiscus Coconut Milk ₹300</div></div><div class="m-price">₹300</div></div>
+        <div class="m-item" data-name="orange thyme mocktail"><div class="m-left"><div class="m-name">Orange Thyme Mocktail ₹250</div></div><div class="m-price">₹250</div></div>
+        <div class="m-item" data-name="tamarind spiced mocktail"><div class="m-left"><div class="m-name">Tamarind Spiced Mocktail ₹250</div></div><div class="m-price">₹250</div></div>
+      </div>
+    </div>
+    <!-- TEAS -->
+    <div class="menu-group" data-category="TEAS">
+      <div class="group-head"><h3>Teas</h3><span></span></div>
+      <div class="group-grid">
+        <div class="m-item" data-name="zaffran masala chai"><div class="m-left"><div class="m-name">Zaffran Masala Chai ₹150</div></div><div class="m-price">₹150</div></div>
+        <div class="m-item" data-name="green tea"><div class="m-left"><div class="m-name">Green Tea ₹150</div></div><div class="m-price">₹150</div></div>
+        <div class="m-item" data-name="marrakesh mojito"><div class="m-left"><div class="m-name">Marrakesh Mojito</div><div class="m-desc">Green Tea, Moroccan Mint, Lemon</div></div><div class="m-price"></div></div>
+        <div class="m-item" data-name="amber glow"><div class="m-left"><div class="m-name">Amber Glow</div><div class="m-desc">White Tea, Saffron, Chamomile, Lemongrass</div></div><div class="m-price"></div></div>
+        <div class="m-item" data-name="her majesty"><div class="m-left"><div class="m-name">Her Majesty</div><div class="m-desc">White Tea, Jasmine, Rosebuds</div></div><div class="m-price"></div></div>
+        <div class="m-item" data-name="royal blossom"><div class="m-left"><div class="m-name">Royal Blossom</div><div class="m-desc">Black Tea, Lavender, Rose Petals</div></div><div class="m-price"></div></div>
+        <div class="m-item" data-name="kashmiri kahwa"><div class="m-left"><div class="m-name">Kashmiri Kahwa</div><div class="m-desc">Green Tea, Saffron, Cardamom, Cinnamon, Clove, Rose, Almond</div></div><div class="m-price"></div></div>
+        <div class="m-item" data-name="serendipity"><div class="m-left"><div class="m-name">Serendipity</div><div class="m-desc">Black Tea, Cinnamon, Goji Berry, Ginger, Orange Peel, Peppermint, Clove, Vanilla</div></div><div class="m-price"></div></div>
+      </div>
+    </div>
+    <!-- BITE RITUALS -->
+    <div class="menu-group" data-category="BITE RITUALS">
+      <div class="group-head"><h3>Bite Rituals</h3><span></span></div>
+      <div class="group-grid">
+        <div class="m-item" data-name="tear & share"><div class="m-left"><div class="m-name">Tear & Share ₹380</div><div class="m-allergy">Gluten, Dairy, Nuts</div></div><div class="m-price">₹380</div></div>
+        <div class="m-item" data-name="pigs in a blanket"><div class="m-left"><div class="m-name">Pigs in a Blanket ₹400</div><div class="m-allergy">Gluten, Dairy, Egg</div></div><div class="m-price">₹400</div></div>
+        <div class="m-item" data-name="golden dust"><div class="m-left"><div class="m-name">Golden Dust ₹200</div><div class="m-allergy">May contain gluten</div></div><div class="m-price">₹200</div></div>
+        <div class="m-item" data-name="butter bath prawns"><div class="m-left"><div class="m-name">Butter Bath Prawns ₹350</div><div class="m-allergy">Shellfish, Dairy</div></div><div class="m-price">₹350</div></div>
+        <div class="m-item" data-name="devil's wings"><div class="m-left"><div class="m-name">Devil's Wings ₹320</div><div class="m-allergy">Gluten, Soy</div></div><div class="m-price">₹320</div></div>
+        <div class="m-item" data-name="truffle crunch"><div class="m-left"><div class="m-name">Truffle Crunch ₹300</div><div class="m-allergy">Dairy</div></div><div class="m-price">₹300</div></div>
+        <div class="m-item" data-name="cajun kicker"><div class="m-left"><div class="m-name">Cajun Kicker ₹200</div><div class="m-allergy">Dairy</div></div><div class="m-price">₹200</div></div>
+        <div class="m-item" data-name="ring around"><div class="m-left"><div class="m-name">Ring Around ₹250</div><div class="m-allergy">Gluten, Dairy</div></div><div class="m-price">₹250</div></div>
+        <div class="m-item" data-name="sweet heat edamame"><div class="m-left"><div class="m-name">Sweet Heat Edamame ₹350</div><div class="m-allergy">Soy, Sesame, Gluten</div></div><div class="m-price">₹350</div></div>
+        <div class="m-item" data-name="charred crispy giants"><div class="m-left"><div class="m-name">Charred Crispy Giants ₹250</div><div class="m-allergy">Gluten</div></div><div class="m-price">₹250</div></div>
+      </div>
+    </div>
+    <div class="menu-foot">Inclusive of all taxes</div>
+    <div id="noResults" style="display:none;text-align:center;padding:32px 0;color:var(--muted);font-size:13px">No items found for your search.</div>
+  </div>
+</section>
+
+<section class="space">
+  <div class="space-grid">
+    <div class="space-img">
+      <img src="https://www.designarena.ai/u/9c384af1-03e8-4da7-ab33-70f2c96f7b25" alt="ITRRU warm light interior - the space to stay awhile" loading="lazy">
+    </div>
+    <div class="space-text reveal">
+      <div class="eyebrow">The Space</div>
+      <h2 class="h2">Warm light.<br>Thoughtful details. <em>Space to stay awhile.</em></h2>
+      <p>Every corner of ITRRU is composed like a photograph — brass inlay underfoot, fluted walnut at the bar, pendant lights that pool like honey. Whether you come to work, meet or simply be alone together, the room holds you.</p>
+      <div class="space-list">
+        <div><i></i> Architectural, intimate, modern Indian</div>
+        <div><i></i> Outdoor seating under soft leaves</div>
+        <div><i></i> Quiet corners, shared tables, bar seats</div>
+      </div>
+      <a href="#gallery" class="card-link" style="margin-top:22px">View Gallery →</a>
+    </div>
+  </div>
+</section>
+
+<section class="gallery" id="gallery">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Gallery</div>
+      <h2 class="h2">A place, in frames</h2>
+      <div class="filter-row" id="galleryFilters">
+        <button class="filter-btn active" data-gal="all">All</button>
+        <button class="filter-btn" data-gal="space">The Space</button>
+        <button class="filter-btn" data-gal="bar">The Bar</button>
+        <button class="filter-btn" data-gal="table">The Table</button>
+        <button class="filter-btn" data-gal="details">The Details</button>
+        <button class="filter-btn" data-gal="coffee">The Coffee</button>
+        <button class="filter-btn" data-gal="experience">The Experience</button>
+      </div>
+    </div>
+    <div class="masonry" id="masonry">
+      <div class="masonry-item" data-gal="bar"><img src="https://www.designarena.ai/u/a0a6b25f-58c5-486b-a08e-87dc1195c361" alt="ITRRU bar with brass stools" loading="lazy"><span class="cap">The Bar</span></div>
+      <div class="masonry-item" data-gal="space"><img src="https://www.designarena.ai/u/9c384af1-03e8-4da7-ab33-70f2c96f7b25" alt="ITRRU exterior warm light" loading="lazy"><span class="cap">The Space</span></div>
+      <div class="masonry-item" data-gal="coffee"><img src="https://www.designarena.ai/u/2d1b41fd-b0ab-4b0f-b1b0-75ceb9c36adb" alt="Coffee craft detail" loading="lazy"><span class="cap">The Coffee</span></div>
+      <div class="masonry-item" data-gal="details"><img src="https://www.designarena.ai/u/dc59ba8f-a532-445a-bca2-ceb862c1a1cb" alt="Artwork and wall details" loading="lazy"><span class="cap">The Details</span></div>
+      <div class="masonry-item" data-gal="experience"><img src="https://www.designarena.ai/u/fe8c23db-2c33-4d95-96e7-61240db37a61" alt="Conversations and moments" loading="lazy"><span class="cap">The Experience</span></div>
+      <div class="masonry-item" data-gal="table"><img src="https://www.designarena.ai/u/82296a6c-d3fb-40bf-8b34-5de51576d7ca" alt="Plated bites at ITRRU" loading="lazy"><span class="cap">The Table</span></div>
+      <div class="masonry-item" data-gal="space"><img src="https://www.designarena.ai/u/74102dc0-0ea6-452c-9328-718dd5dfd1ec" alt="Outdoor seating area" loading="lazy"><span class="cap">The Space</span></div>
+      <div class="masonry-item" data-gal="details"><img src="https://www.designarena.ai/u/d6a24556-c0c2-4859-b990-5e898457409b" alt="Bar equipment and brass" loading="lazy"><span class="cap">The Bar</span></div>
+      <div class="masonry-item" data-gal="coffee"><img src="https://www.designarena.ai/u/245887fa-fc25-48cc-9dac-b1803b86eb1c" alt="Coffee preparation" loading="lazy"><span class="cap">The Coffee</span></div>
+      <div class="masonry-item" data-gal="space"><img src="https://www.designarena.ai/u/105376b8-8c86-42da-a3fe-68f3ef141d50" alt="Interior wide view" loading="lazy"><span class="cap">The Space</span></div>
+      <div class="masonry-item" data-gal="experience"><img src="https://www.designarena.ai/u/81dcf2cd-ff65-4415-991a-dd1176b297ce" alt="Evening light and hospitality" loading="lazy"><span class="cap">The Experience</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="reservation" id="reservation">
+  <div class="wrap reveal">
+    <div>
+      <div class="eyebrow" style="color:var(--gold)">Reservation</div>
+      <h2>Make it an <em>ITRRU moment</em></h2>
+      <p class="lead">Reserve your table. Tell us when you'd like to come — we'll confirm on WhatsApp. No real-time availability, just warm, human hospitality.</p>
+      <div style="margin-top:28px;border:1px solid rgba(232,214,184,.18);padding:18px;display:flex;gap:14px;align-items:center">
+        <img src="https://www.designarena.ai/u/105376b8-8c86-42da-a3fe-68f3ef141d50" alt="" style="width:56px;height:56px;object-fit:cover;opacity:.9">
+        <div style="font-size:12px;line-height:1.6;color:rgba(253,251,243,.7)"><strong style="color:var(--cream);letter-spacing:.08em;text-transform:uppercase;font-size:11px;display:block">ITRRU · Mahatma Nagar</strong>Open Every Day 2 PM — 11 PM<br>We reply on WhatsApp during open hours.</div>
+      </div>
+    </div>
+    <form class="form-card" id="reservationForm">
+      <h4>Reserve your table</h4>
+      <div class="form-grid">
+        <div class="field full">
+          <label for="rName">Name *</label>
+          <input id="rName" type="text" placeholder="Your name" required>
+        </div>
+        <div class="field">
+          <label for="rPhone">Phone *</label>
+          <input id="rPhone" type="tel" placeholder="+91  — — — — — — — —" required pattern="[0-9+ ]*">
+        </div>
+        <div class="field">
+          <label for="rGuests">Guests *</label>
+          <select id="rGuests" required>
+            <option value="" disabled selected>Select</option>
+            <option>1 Guest</option><option>2 Guests</option><option>3 Guests</option><option>4 Guests</option><option>5 Guests</option><option>6 Guests</option><option>7 Guests</option><option>8+ Guests</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="rDate">Date *</label>
+          <input id="rDate" type="date" required>
+        </div>
+        <div class="field">
+          <label for="rTime">Preferred time *</label>
+          <select id="rTime" required>
+            <option value="" disabled selected>Select time</option>
+            <option>2:00 PM</option><option>3:00 PM</option><option>4:00 PM</option><option>5:00 PM</option><option>6:00 PM</option><option>7:00 PM</option><option>8:00 PM</option><option>9:00 PM</option><option>10:00 PM</option>
+          </select>
+        </div>
+      </div>
+      <button type="submit" class="btn-whatsapp">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19.05 4.91A9.82 9.82 0 0 0 12.03 2C6.57 2 2.1 6.45 2.1 11.9c0 1.75.46 3.45 1.32 4.95L2 22l5.28-1.38A9.82 9.82 0 0 0 12.03 21.8c5.46 0 9.91-4.45 9.91-9.9 0-2.64-1.03-5.13-2.89-6.99Zm-7.02 15.2c-1.49 0-2.95-.4-4.22-1.15l-.3-.18-3.13.82.83-3.05-.2-.31A8.2 8.2 0 0 1 3.9 11.9c0-4.53 3.69-8.21 8.22-8.21 2.2 0 4.26.86 5.81 2.41a8.17 8.17 0 0 1 2.41 5.8c0 4.53-3.69 8.21-8.31 8.21Zm4.51-6.15c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.39.11-.51.11-.11.25-.29.37-.43.12-.14.16-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.35-.77-1.85-.2-.48-.4-.42-.56-.43l-.48-.01c-.17 0-.43.06-.66.31-.22.25-.86.84-.86 2.05s.88 2.38 1 2.54c.12.17 1.73 2.65 4.2 3.71.59.26 1.05.41 1.41.52.59.19 1.13.16 1.55.1.47-.07 1.47-.6 1.68-1.18.2-.58.2-1.08.14-1.18-.05-.1-.22-.16-.46-.28Z"/></svg>
+        Reserve via WhatsApp
+      </button>
+      <div class="form-note">By tapping reserve, you’ll be redirected to WhatsApp with a pre-filled message. We’ll confirm availability there.</div>
+    </form>
+  </div>
+</section>
+
+<section class="visit" id="visit">
+  <div class="wrap visit-grid">
+    <div class="reveal">
+      <div class="eyebrow">Come find us</div>
+      <h2 class="h2">ITRRU,<br><em>Mahatma Nagar</em></h2>
+      <div class="gold-rule"></div>
+      <p style="font-size:14px;line-height:1.8;color:var(--muted);max-width:420px">A quiet, premium cafe in Mahatma Nagar, Nashik, Maharashtra, India. Easy to reach, designed to make you want to stay. </p>
+      <div class="visit-card">
+        <h3>ITRRU — Mahatma Nagar, Nashik</h3>
+        <p>Mahatma Nagar, Nashik, Maharashtra, India</p>
+        <div class="visit-actions">
+          <a href="https://maps.app.goo.gl/YYs8S9pPbvBSNGES9" target="_blank" rel="noopener" class="btn btn-dark" style="padding:12px 18px;font-size:10px">Get Directions</a>
+          <a href="tel:" id="callBtn" class="btn btn-line" style="padding:12px 18px;font-size:10px">Call ITRRU</a>
+          <a href="#" id="waBtn" class="btn btn-line" style="padding:12px 18px;font-size:10px">WhatsApp</a>
+        </div>
+      </div>
+      <div class="hours-mini">
+        <div><strong>Hours</strong>Every day<br>2 PM — 11 PM</div>
+        <div><strong>Maps</strong><a href="https://maps.app.goo.gl/YYs8S9pPbvBSNGES9" target="_blank" style="color:var(--forest);text-decoration:underline">Open in Google Maps</a></div>
+      </div>
+    </div>
+    <div class="map-card reveal" style="transition-delay:.1s">
+      <img src="https://www.designarena.ai/u/74102dc0-0ea6-452c-9328-718dd5dfd1ec" alt="ITRRU location - outdoor and approach" loading="lazy">
+      <a href="https://maps.app.goo.gl/YYs8S9pPbvBSNGES9" target="_blank" class="map-pin" style="text-decoration:none">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s7-6 7-11a7 7 0 1 0-14 0c0 5 7 11 7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+        Open Maps
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="hours-strip">
+  <div class="wrap">
+    <div class="eyebrow">Hours</div>
+    <div class="hours-big">Open <span>Every Day</span></div>
+    <div class="hours-sub">2 PM — 11 PM · Mahatma Nagar · Nashik</div>
+  </div>
+</section>
+
+<section class="instagram">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Follow the experience</div>
+      <h2 class="h2">@itrru.nashik</h2>
+      <p>Quiet luxury, slow mornings and late evenings — follow the story.</p>
+      <a href="https://www.instagram.com/itrru.nashik/" target="_blank" rel="noopener" class="btn btn-dark" style="margin-top:18px;padding:12px 22px;font-size:10px">Follow on Instagram</a>
+    </div>
+    <div class="insta-grid">
+      <a href="https://www.instagram.com/itrru.nashik/" target="_blank"><img src="https://www.designarena.ai/u/a0a6b25f-58c5-486b-a08e-87dc1195c361" alt="Instagram 1" loading="lazy"></a>
+      <a href="https://www.instagram.com/itrru.nashik/" target="_blank"><img src="https://www.designarena.ai/u/9c384af1-03e8-4da7-ab33-70f2c96f7b25" alt="Instagram 2" loading="lazy"></a>
+      <a href="https://www.instagram.com/itrru.nashik/" target="_blank"><img src="https://www.designarena.ai/u/74102dc0-0ea6-452c-9328-718dd5dfd1ec" alt="Instagram 3" loading="lazy"></a>
+      <a href="https://www.instagram.com/itrru.nashik/" target="_blank"><img src="https://www.designarena.ai/u/2d1b41fd-b0ab-4b0f-b1b0-75ceb9c36adb" alt="Instagram 4" loading="lazy"></a>
+      <a href="https://www.instagram.com/itrru.nashik/" target="_blank"><img src="https://www.designarena.ai/u/82296a6c-d3fb-40bf-8b34-5de51576d7ca" alt="Instagram 5" loading="lazy"></a>
+      <a href="https://www.instagram.com/itrru.nashik/" target="_blank"><img src="https://www.designarena.ai/u/d6a24556-c0c2-4859-b990-5e898457409b" alt="Instagram 6" loading="lazy"></a>
+      <a href="https://www.instagram.com/itrru.nashik/" target="_blank"><img src="https://www.designarena.ai/u/dc59ba8f-a532-445a-bca2-ceb862c1a1cb" alt="Instagram 7" loading="lazy"></a>
+      <a href="https://www.instagram.com/itrru.nashik/" target="_blank"><img src="https://www.designarena.ai/u/fe8c23db-2c33-4d95-96e7-61240db37a61" alt="Instagram 8" loading="lazy"></a>
+      <a href="https://www.instagram.com/itrru.nashik/" target="_blank"><img src="https://www.designarena.ai/u/245887fa-fc25-48cc-9dac-b1803b86eb1c" alt="Instagram 9" loading="lazy"></a>
+      <a href="https://www.instagram.com/itrru.nashik/" target="_blank"><img src="https://www.designarena.ai/u/105376b8-8c86-42da-a3fe-68f3ef141d50" alt="Instagram 10" loading="lazy"></a>
+      <a href="https://www.instagram.com/itrru.nashik/" target="_blank"><img src="https://www.designarena.ai/u/81dcf2cd-ff65-4415-991a-dd1176b297ce" alt="Instagram 11" loading="lazy"></a>
+      <a href="https://www.instagram.com/itrru.nashik/" target="_blank" style="background:var(--forest);display:flex;align-items:center;justify-content:center;color:var(--cream);font-size:10px;letter-spacing:.14em;text-transform:uppercase;text-align:center;line-height:1.4">Follow<br>@itrru.nashik</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">itrru <small>Mahatma Nagar · Nashik</small></div>
+        <p style="font-size:13px;line-height:1.7;margin-top:14px;max-width:320px;color:rgba(253,251,243,.55)">A warm, premium, editorial cafe — crafted for coffee, conversations and unhurried moments. Forest green, muted gold, cream, walnut and brass.</p>
+        <div style="margin-top:18px;display:flex;gap:10px">
+          <a href="https://www.instagram.com/itrru.nashik/" target="_blank" style="width:36px;height:36px;border:1px solid rgba(253,251,243,.15);display:flex;align-items:center;justify-content:center">◎</a>
+          <a href="https://maps.app.goo.gl/YYs8S9pPbvBSNGES9" target="_blank" style="width:36px;height:36px;border:1px solid rgba(253,251,243,.15);display:flex;align-items:center;justify-content:center">⌖</a>
+        </div>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <a href="#home">Home</a>
+        <a href="#menu">Menu</a>
+        <a href="#experience">Experience</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#visit">Visit</a>
+      </div>
+      <div>
+        <h4>Visit</h4>
+        <a href="https://maps.app.goo.gl/YYs8S9pPbvBSNGES9" target="_blank">Get Directions</a>
+        <a href="#reservation">Reserve a Table</a>
+        <a href="https://www.instagram.com/itrru.nashik/" target="_blank">@itrru.nashik</a>
+      </div>
+      <div>
+        <h4>Find us</h4>
+        <p style="font-size:13px;line-height:1.7;color:rgba(253,251,243,.6);margin:0">ITRRU<br>Mahatma Nagar,<br>Nashik, Maharashtra, India</p>
+        <p style="font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-top:14px">Everyday 2 PM — 11 PM</p>
+        <a href="#reservation" class="btn btn-gold" style="margin-top:14px;padding:10px 18px;font-size:10px;display:inline-flex">Reserve a Table</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> ITRRU, Nashik. All rights reserved. Private demo — not official site.</span>
+      <span style="letter-spacing:.12em;text-transform:uppercase;font-size:10px">Inclusive of all taxes · Quiet luxury · Warm hospitality</span>
+    </div>
+  </div>
+</footer>
+
+<div class="mobile-bottom" id="mobileBottom">
+  <a href="#menu" class="secondary">☰ Menu</a>
+  <a href="#reservation" class="primary">Reserve</a>
+  <a href="https://maps.app.goo.gl/YYs8S9pPbvBSNGES9" target="_blank" class="secondary">Directions</a>
+</div>
+
+<div class="lightbox" id="lightbox" aria-hidden="true">
+  <button class="lightbox-close" id="lbClose" aria-label="Close">×</button>
+  <img src="" alt="" id="lbImg">
+</div>
+<div class="toast" id="toast"></div>
+
+<script>
+const WHATSAPP_NUMBER = 'WHATSAPP_NUMBER_TO_BE_CONFIGURED';
+document.getElementById('year').textContent = new Date().getFullYear();
+
+// navbar scroll
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', ()=> {
+  if(window.scrollY > 50) navbar.classList.add('scrolled');
+  else navbar.classList.remove('scrolled');
+});
+
+// mobile drawer
+const toggle = document.getElementById('menuToggle');
+const drawer = document.getElementById('mobileDrawer');
+const closeDrawer = document.getElementById('closeDrawer');
+function openDrawer(){ drawer.classList.add('open'); drawer.setAttribute('aria-hidden','false'); document.body.style.overflow='hidden'; }
+function shutDrawer(){ drawer.classList.remove('open'); drawer.setAttribute('aria-hidden','true'); document.body.style.overflow=''; }
+toggle.addEventListener('click', openDrawer);
+closeDrawer.addEventListener('click', shutDrawer);
+document.querySelectorAll('.m-link').forEach(a=>a.addEventListener('click', shutDrawer));
+
+// active nav on scroll
+const sections = ['home','menu','experience','gallery','visit'];
+const navLinks = document.querySelectorAll('.nav-link');
+window.addEventListener('scroll', ()=>{
+  let cur='';
+  sections.forEach(id=>{
+    const el=document.getElementById(id);
+    if(el){
+      const top=el.offsetTop - 120;
+      if(window.scrollY >= top) cur=id;
+    }
+  });
+  navLinks.forEach(l=>{
+    l.classList.toggle('active', l.getAttribute('href')==='#'+cur);
+  });
+});
+
+// reveal on scroll
+const observer = new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('visible') })
+},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+
+// menu search + filter
+const searchInput = document.getElementById('menuSearch');
+const menuGroups = document.querySelectorAll('.menu-group');
+const noResults = document.getElementById('noResults');
+const catBtns = document.querySelectorAll('.cat-btn');
+let activeCat = 'all';
+
+function filterMenu(){
+  const q = searchInput.value.trim().toLowerCase();
+  let anyVisible=false;
+  menuGroups.forEach(group=>{
+    const cat = group.dataset.category;
+    const catMatch = activeCat==='all' || (activeCat==='SIGNATURE' ? cat==='SIGNATURE' : cat===activeCat);
+    let groupVisible = false;
+    if(catMatch){
+      const items = group.querySelectorAll('.m-item');
+      items.forEach(item=>{
+        const name = item.dataset.name || '';
+        const text = item.textContent.toLowerCase();
+        const match = !q || name.includes(q) || text.includes(q);
+        item.style.display = match ? '' : 'none';
+        if(match) { groupVisible=true; anyVisible=true; }
+      });
+    } else {
+      group.querySelectorAll('.m-item').forEach(i=>i.style.display='none');
+    }
+    group.style.display = groupVisible ? '' : 'none';
+    if(q && !groupVisible && catMatch){
+      // hide group header if no items match
+    }
+  });
+  noResults.style.display = anyVisible ? 'none' : 'block';
+  // if searching and category active but no results in that cat, still show noResults
+}
+searchInput.addEventListener('input', filterMenu);
+catBtns.forEach(btn=>{
+  btn.addEventListener('click', ()=>{
+    catBtns.forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    activeCat = btn.dataset.filter;
+    if(activeCat !== 'all'){
+      const target = document.querySelector(`.menu-group[data-category="${activeCat}"]`);
+      if(target) target.scrollIntoView({behavior:'smooth', block:'start'});
+    }
+    filterMenu();
+  });
+});
+
+// gallery filter
+const galBtns = document.querySelectorAll('.filter-btn');
+const masonryItems = document.querySelectorAll('.masonry-item');
+galBtns.forEach(btn=>{
+  btn.addEventListener('click', ()=>{
+    galBtns.forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    const f = btn.dataset.gal;
+    masonryItems.forEach(it=>{
+      const cat = it.dataset.gal;
+      it.style.display = (f==='all' || f===cat) ? '' : 'none';
+    });
+  });
+});
+
+// lightbox
+const lightbox = document.getElementById('lightbox');
+const lbImg = document.getElementById('lbImg');
+const lbClose = document.getElementById('lbClose');
+masonryItems.forEach(item=>{
+  item.addEventListener('click', ()=>{
+    const img = item.querySelector('img');
+    lbImg.src = img.src;
+    lbImg.alt = img.alt;
+    lightbox.classList.add('open');
+    lightbox.setAttribute('aria-hidden','false');
+    document.body.style.overflow='hidden';
+  });
+});
+function closeLb(){ lightbox.classList.remove('open'); lightbox.setAttribute('aria-hidden','true'); document.body.style.overflow=''; }
+lbClose.addEventListener('click', closeLb);
+lightbox.addEventListener('click', (e)=>{ if(e.target===lightbox) closeLb(); });
+document.addEventListener('keydown', (e)=>{ if(e.key==='Escape') { closeLb(); shutDrawer(); }});
+
+// reservation
+const form = document.getElementById('reservationForm');
+const toast = document.getElementById('toast');
+function showToast(msg){
+  toast.textContent = msg;
+  toast.classList.add('show');
+  setTimeout(()=>toast.classList.remove('show'), 3800);
+}
+// set min date today
+const dateInput = document.getElementById('rDate');
+const today = new Date().toISOString().split('T')[0];
+dateInput.min = today;
+
+form.addEventListener('submit', (e)=>{
+  e.preventDefault();
+  const name = document.getElementById('rName').value.trim();
+  const phone = document.getElementById('rPhone').value.trim();
+  const guests = document.getElementById('rGuests').value;
+  const date = document.getElementById('rDate').value;
+  const time = document.getElementById('rTime').value;
+  if(!name || !phone || !guests || !date || !time){ showToast('Please fill all required fields.'); return; }
+  const message = `Hi Itrru, I'd like to reserve a table. Name: ${name} Guests: ${guests} Date: ${date} Preferred time: ${time} Phone: ${phone}`;
+  const encoded = encodeURIComponent(message);
+  if(WHATSAPP_NUMBER === 'WHATSAPP_NUMBER_TO_BE_CONFIGURED' || !WHATSAPP_NUMBER || WHATSAPP_NUMBER.includes('PLACEHOLDER')){
+    showToast('WhatsApp number not configured yet. Preview: ' + message);
+    // also copy to clipboard if possible
+    if(navigator.clipboard) navigator.clipboard.writeText(message).catch(()=>{});
+  } else {
+    const url = `https://wa.me/${WHATSAPP_NUMBER.replace(/[^0-9]/g,'')}?text=${encoded}`;
+    window.open(url, '_blank');
+  }
+});
+document.getElementById('waBtn').addEventListener('click', (e)=>{
+  e.preventDefault();
+  if(WHATSAPP_NUMBER === 'WHATSAPP_NUMBER_TO_BE_CONFIGURED') showToast('WhatsApp: number to be configured (WHATSAPP_NUMBER_TO_BE_CONFIGURED)');
+  else window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent('Hi ITRRU, I would like to know more.')}`,'_blank');
+});
+document.getElementById('callBtn').addEventListener('click', (e)=>{
+  // placeholder phone
+  const ph = '';
+  if(!ph){ e.preventDefault(); showToast('Phone number to be configured — visit us at Mahatma Nagar, Nashik.'); }
+});
+
+// smooth anchor offset for fixed nav
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click', function(e){
+    const id=this.getAttribute('href');
+    if(id.length>1){
+      const target=document.querySelector(id);
+      if(target){
+        e.preventDefault();
+        const top = target.offsetTop - 70;
+        window.scrollTo({top, behavior:'smooth'});
+      }
+    }
+  });
+});
+
+// parallax hero
+let lastY=0;
+window.addEventListener('scroll', ()=>{
+  const y=window.scrollY;
+  const heroBg=document.querySelector('.hero-bg img');
+  if(heroBg && y<window.innerHeight){
+    heroBg.style.transform=`translateY(${y*0.18}px) scale(1.04)`;
+  }
+},{passive:true});
+</script>
+</body>
+</html>
